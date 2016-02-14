@@ -16,7 +16,7 @@ defmodule AliceAgainstHumanity.Mixfile do
 
   defp deps do
      [
-       {:alice, path: "~/projects/alice"},
+       {:alice, "~> 0.1.0"},
        {:websocket_client, github: "jeremyong/websocket_client"}
      ]
   end

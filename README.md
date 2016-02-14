@@ -14,7 +14,7 @@ If [available in Hex](https://hex.pm/packages/alice_against_humanity), the packa
     defp deps do
        [
          {:websocket_client, github: "jeremyong/websocket_client"},
-         {:alice, "~> 0.0.4"},
+         {:alice, "~> 0.1.0"},
          {:alice_against_humanity, "~> 0.0.1"}
        ]
     end
