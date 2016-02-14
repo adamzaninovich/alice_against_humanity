@@ -7,7 +7,7 @@ defmodule AliceAgainstHumanity.Mixfile do
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     description: "A Slack bot",
+     description: "A handler for the Alice Slack bot. Play Cards Against Humanity with Alice.",
      package: package,
      deps: deps]
   end
