@@ -134,7 +134,8 @@ defmodule Alice.Handlers.AgainstHumanity do
       "When the United States raced the Soviet Union to the moon, the Mexican government funneled millions of pesos into research on _____.",
       "Why am I sticky?",
       "Why can't I sleep at night?",
-      "Why do I hurt all over?"
+      "Why do I hurt all over?",
+      "Y'all got _____?"
     ]
   end
 
@@ -420,6 +421,7 @@ defmodule Alice.Handlers.AgainstHumanity do
       "Grave robbing.",
       "Guys who don't call.",
       "Half-assed foreplay.",
+      "Hambu.",
       "Harry Potter erotica.",
       "Heartwarming orphans.",
       "Her Royal Highness, Queen Elizabeth II.",
@@ -585,7 +587,7 @@ defmodule Alice.Handlers.AgainstHumanity do
       "Racism.",
       "Raping and pillaging.",
       "Re-gifting.",
-      "Repression,.",
+      "Repression.",
       "Republicans.",
       "Revenge fucking.",
       "Riding off into the sunset.",
