@@ -7,15 +7,18 @@ defmodule Alice.Handlers.AgainstHumanity do
   command ~r/\bhumanity choice\z/i, :cah_choice
   command ~r/\bcah choice\z/i,      :cah_choice
 
-  def handle(conn, :cah_random) do
-    random_reply(black_cards, conn)
-    random_reply(white_cards, conn)
+  @doc "`cah` or `@alice humanity` - Pull and random Black and White card"
+  def cah_random(conn) do
+    conn
+    |> random_reply(black_cards)
+    |> random_reply(white_cards)
   end
 
-  def handle(conn, :cah_choice) do
-    random_reply(black_cards, conn)
-    "A) #{random_white_card}; B) #{random_white_card}; C) #{random_white_card}"
-    |> reply(conn)
+  @doc "`cah choice` or `@alice humanity choice` - Pull and random Black and 3 White cards"
+  def cah_choice(conn) do
+    conn
+    |> random_reply(black_cards)
+    |> reply("A) #{random_white_card}; B) #{random_white_card}; C) #{random_white_card}")
   end
 
   defp random_white_card do
