@@ -77,7 +77,7 @@ defmodule Alice.Handlers.AgainstHumanity do
       "Next from J.K. Rowling: Harry Potter and the Chamber of _____.",
       "Next on ESPN2: The World Series of _____.",
       "Next time on Dr. Phil: How to talk to your child about _____.",
-      "On the third day of Christmas, my true love game to me: three French hens, two turtle doves, and _____.",
+      "On the third day of Christmas, my true love gave to me: three French hens, two turtle doves, and _____.",
       "Only two things in life are certain: death and _____.",
       "Science will never explain the origin of _____.",
       "Studies show that lab rats navigate mazes 50% faster after being exposed to _____",
