@@ -1,4 +1,9 @@
 defmodule Alice.Handlers.AgainstHumanity do
+  @moduledoc """
+  This handler will allow Alice to play pairs of cards
+  from the card game Cards Against Humanity.
+  """
+
   use Alice.Router
 
   command ~r/\bhumanity\z/i,        :cah_random
@@ -7,23 +12,21 @@ defmodule Alice.Handlers.AgainstHumanity do
   command ~r/\bhumanity choice\z/i, :cah_choice
   command ~r/\bcah choice\z/i,      :cah_choice
 
-  @doc "`cah` or `@alice humanity` - Pull and random Black and White card"
+  @doc "`cah` - Pull a random Black and White card"
   def cah_random(conn) do
     conn
     |> random_reply(black_cards)
     |> random_reply(white_cards)
   end
 
-  @doc "`cah choice` or `@alice humanity choice` - Pull and random Black and 3 White cards"
+  @doc "`cah choice` - Pull a random Black and 3 White cards"
   def cah_choice(conn) do
     conn
     |> random_reply(black_cards)
-    |> reply("A) #{random_white_card}; B) #{random_white_card}; C) #{random_white_card}")
+    |> reply("A) #{white_card}; B) #{white_card}; C) #{white_card}")
   end
 
-  defp random_white_card do
-    Enum.random(white_cards)
-  end
+  defp white_card, do: Enum.random(white_cards)
 
   defp black_cards do
     [
@@ -727,7 +730,7 @@ defmodule Alice.Handlers.AgainstHumanity do
       "The Tempur-Pedic Swedish Sleep System.",
       "The terrorists.",
       "The Three-Fifths Compromise.",
-      "The tiny calloused hands of the Chinese  children that made this card.",
+      "The tiny calloused hands of the Chinese children that made this card.",
       "The token minority.",
       "The Trail of Tears.",
       "The true meaning of Christmas.",
