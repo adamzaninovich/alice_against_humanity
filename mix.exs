@@ -3,7 +3,7 @@ defmodule AliceAgainstHumanity.Mixfile do
 
   def project do
     [app: :alice_against_humanity,
-     version: "0.1.1",
+     version: "0.1.2",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -18,8 +18,9 @@ defmodule AliceAgainstHumanity.Mixfile do
 
   defp deps do
     [
+      {:credo, ">= 0.0.0", only: :dev},
       {:websocket_client, github: "jeremyong/websocket_client"},
-      {:alice, "~> 0.2.0"}
+      {:alice, "~> 0.3"}
     ]
   end
 
