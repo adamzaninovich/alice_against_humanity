@@ -15,20 +15,20 @@ defmodule Alice.Handlers.AgainstHumanity do
   @doc "`cah` - Pull a random Black and White card"
   def cah_random(conn) do
     conn
-    |> random_reply(black_cards)
-    |> random_reply(white_cards)
+    |> random_reply(black_cards())
+    |> random_reply(white_cards())
   end
 
   @doc "`cah choice` - Pull a random Black and 3 White cards"
   def cah_choice(conn) do
     conn
-    |> random_reply(black_cards)
-    |> reply("A) #{white_card}; B) #{white_card}; C) #{white_card}")
+    |> random_reply(black_cards())
+    |> reply("A) #{white_card()}; B) #{white_card()}; C) #{white_card()}")
   end
 
-  defp white_card, do: Enum.random(white_cards)
+  defp white_card(), do: Enum.random(white_cards())
 
-  defp black_cards do
+  defp black_cards() do
     [
       "A romantic candlelit dinner would be incomplete without _____.",
       "After blacking out during New Year's Eve, I was awoken by _____.",
@@ -145,7 +145,7 @@ defmodule Alice.Handlers.AgainstHumanity do
     ]
   end
 
-  defp white_cards do
+  defp white_cards() do
     [
       "Tweeting.",
       "72 virgins.",
